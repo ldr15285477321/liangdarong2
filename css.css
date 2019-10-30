@@ -1,0 +1,142 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.background{
+    width: 70%;
+    height: 800px;
+    /* background-color: rgba(134, 134, 134, 0.932); */
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    position: relative;
+    transition: 10s;
+}
+.box{
+    width: 300px;
+    height: 300px;
+    transform-origin: left top;
+    transform: rotateY(30deg) rotateX(30deg) translateZ(15px);
+    transform-style: preserve-3d;
+    transition: 10s;
+}
+.box:active{
+    transform: rotateY(720deg);
+    transform-origin:right;
+}
+.box>div{
+    width: 300px;
+    height:300px;
+}
+.box>.game{
+    position: absolute;
+    left: 1%;
+    top:1%;
+    background: url(./img/416cdafa03017d10.jpg);
+    background-size: 300px auto;
+    opacity: 0;
+    transition-timing-function: 10s;
+}
+.box>.top{
+/*     background: rgb(71, 216, 216); */
+    background: url(./img/IMG20191003193514.jpg);
+    background-size: 300px auto;
+    position: absolute;
+    left: 1%;
+    top: 1%;
+    opacity: .8;
+    transform-origin: top;
+    transform: rotateX(90deg);
+}
+.box>.bottom{
+    background: url(./img/IMG20191007125137.jpg);
+    background-size: 300px auto;
+    position: absolute;
+    left: 1%;
+    top: 1%;
+    opacity: .8;
+    transform-origin: bottom;
+    transform: rotateX(-90deg);
+/*     background: cornflowerblue; */
+}
+.box>.left{
+    background: url(./img/IMG_20190426_201756.jpg);
+    background-size: 300px auto;
+    position: absolute;
+    left: 1%;
+    top: 1%;
+    opacity: .8;
+    transform-origin: left;
+    transform: rotateY(-90deg);
+/*     background: rgb(205, 100, 237); */
+}
+.box>.right{
+    background: url(./img/IMG20191007130553.jpg);
+    background-size: 300px auto;
+    position: absolute;
+    left: 1%;
+    top: 1%;
+    opacity: .8;
+    transform-origin: right;
+    transform: rotateY(90deg);
+/*     background: rgb(237, 100, 146); */
+}
+.box>.front{
+    background: url(./img/402064cabed0296d.jpg);
+    background-size: 300px auto;
+    position: absolute;
+    left: 1%;
+    top: 1%;
+    opacity: .8;
+    transform: translateZ(300px);
+/*     background: rgb(116, 237, 100); */
+}
+.box>.behind{
+    background: url(./img/IMG20191003112708.jpg);
+    background-size: 300px auto;
+    position: absolute;
+    left: 1%;
+    top: 1%;
+    opacity: .8;
+/*     background: rgb(237, 200, 100); */
+}
+.box>div{
+    transition: 7.5s;
+}
+.box:hover .game{
+    transform:  translateZ(150px) scale(1.5);
+    opacity: 1;
+}
+.box:hover .top{
+    transform:rotateX(810deg)  translateZ(200px) scale(.5);
+    box-shadow:0px 0px 59px 3px rgb(255, 0, 234);
+    /* transform-origin: top; */
+}
+.box:hover .bottom{
+    transform:rotateX(-810deg)  translateZ(200px) scale(.5);
+    box-shadow:0px 0px 59px 3px rgb(255, 0, 234);
+    /* transform-origin: top; */
+}
+.box:hover .left{
+    transform:rotateY(-810deg)  translateZ(200px) scale(.5);
+    box-shadow:0px 0px 59px 3px rgb(255, 0, 234);
+    /* transform-origin: top; */
+}
+.box:hover .right{
+    transform:rotateY(810deg)  translateZ(200px) scale(.5);
+    box-shadow:0px 0px 59px 3px rgb(255, 0, 234);
+    /* transform-origin: top; */
+}
+.box:hover .front{
+    transform:translateZ(400px) scale(.5) rotateZ(810deg);
+    box-shadow:0px 0px 59px 3px rgb(255, 0, 234);
+    opacity: 0;
+    /* transform-origin: top; */
+}
+.box:hover .behind{
+    transform:translateZ(-200px) scale(.5) rotateZ(810deg);
+    box-shadow:0px 0px 59px 3px rgb(255, 0, 234);
+    /* transform-origin: top; */
+}
